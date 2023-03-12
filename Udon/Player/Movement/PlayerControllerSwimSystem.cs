@@ -75,7 +75,7 @@ namespace Airtime.Player.Movement
             // passthrough to breath system
             if (Utilities.IsValid(breathSystemEvent))
             {
-                breathSystemEvent.SendCustomEvent("OnWaterEnter");
+                breathSystemEvent.SendCustomEvent("OnUnderwaterEnter");
             }
         }
 
@@ -84,7 +84,7 @@ namespace Airtime.Player.Movement
             // passthrough to breath system
             if (Utilities.IsValid(breathSystemEvent))
             {
-                breathSystemEvent.SendCustomEvent("OnWaterEnter");
+                breathSystemEvent.SendCustomEvent("OnUnderwaterExit");
             }
         }
     }

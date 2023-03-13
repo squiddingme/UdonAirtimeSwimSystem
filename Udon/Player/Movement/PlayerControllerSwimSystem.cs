@@ -16,11 +16,6 @@ namespace Airtime.Player.Movement
 
         public const string STATE_SWIMMING = "Swimming";
 
-        public override void PlayerStateAerialUpdate()
-        {
-            base.PlayerStateAerialUpdate();
-        }
-
         public virtual void PlayerStateSwimmingStart()
         {
             ApplyPlayerProperties();
@@ -50,6 +45,7 @@ namespace Airtime.Player.Movement
 
         public void OnSwimEnter()
         {
+            EndGrind(grindFallCooldown);
             SetPlayerState(STATE_SWIMMING);
 
             // passthrough to breath system
